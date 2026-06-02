@@ -1,5 +1,5 @@
 ---
-const base = import.meta.env.BASE_URL.replace(/\/$/, '');
+const base = import.meta.env.BASE_URL;
 ---
 
 <section class="hero" id="hero">
@@ -19,7 +19,7 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
 
   <div class="hero-right">
     <img
-      src={`${base}headshot.jpg`}
+      src="/sadiqah-portfolio/headshot.jpg"
       alt="Sadiqah Quadery"
       class="hero-image"
     />
