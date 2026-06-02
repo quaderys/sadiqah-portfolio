@@ -1,0 +1,140 @@
+---
+---
+
+<section class="contact section" id="contact">
+  <div class="container">
+    <h2 class="section-title">Contact</h2>
+
+    <div class="contact-inner">
+      <p class="contact-lead">
+        Interested in collaborating, have a question, or want to connect?
+        I would love to hear from you.
+      </p>
+
+      <div class="contact-links">
+        <a href="mailto:sq227@cornell.edu" class="contact-item">
+          <span class="contact-label">Email</span>
+          <span class="contact-value">sq227@cornell.edu →</span>
+        </a>
+        <a href="https://www.linkedin.com/in/squadery/" target="_blank" rel="noopener noreferrer" class="contact-item">
+          <span class="contact-label">LinkedIn</span>
+          <span class="contact-value">linkedin.com/in/squadery →</span>
+        </a>
+        <div class="contact-item no-link">
+          <span class="contact-label">Location</span>
+          <span class="contact-value">New York, NY &amp; Ithaca, NY</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-inner">
+      <span class="footer-name">Sadiqah Quadery</span>
+      <span class="footer-copy">© 2025 · Built with Astro</span>
+    </div>
+  </div>
+</footer>
+
+<style>
+  .contact {
+    background: var(--color-bg-alt);
+    border-top: 1px solid var(--color-border);
+  }
+
+  .section-title {
+    font-family: var(--font-serif);
+    font-size: clamp(2rem, 4vw, 3.5rem);
+    font-weight: 300;
+    color: var(--color-text);
+    margin-bottom: 4rem;
+  }
+
+  .contact-inner {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 6rem;
+    align-items: start;
+  }
+
+  .contact-lead {
+    font-family: var(--font-serif);
+    font-size: 1.6rem;
+    line-height: 1.5;
+    color: var(--color-text);
+    font-weight: 300;
+  }
+
+  .contact-links {
+    display: flex;
+    flex-direction: column;
+    border-top: 1px solid var(--color-border);
+  }
+
+  .contact-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.35rem 0;
+    border-bottom: 1px solid var(--color-border);
+    transition: padding-left 0.25s;
+    gap: 1rem;
+  }
+
+  a.contact-item:hover {
+    padding-left: 0.5rem;
+  }
+
+  .contact-label {
+    font-size: 0.68rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--color-muted);
+    flex-shrink: 0;
+  }
+
+  .contact-value {
+    font-size: 0.9rem;
+    color: var(--color-text);
+    text-align: right;
+  }
+
+  a.contact-item .contact-value {
+    color: var(--color-accent);
+  }
+
+  .footer {
+    border-top: 1px solid var(--color-border);
+    padding: 2rem 2.5rem;
+    background: var(--color-bg-alt);
+  }
+
+  .footer-inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .footer-name {
+    font-family: var(--font-serif);
+    font-size: 1rem;
+    color: var(--color-muted);
+  }
+
+  .footer-copy {
+    font-size: 0.72rem;
+    color: var(--color-muted);
+    letter-spacing: 0.08em;
+  }
+
+  @media (max-width: 768px) {
+    .contact-inner {
+      grid-template-columns: 1fr;
+      gap: 3rem;
+    }
+  }
+</style>

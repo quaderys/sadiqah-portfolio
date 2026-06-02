@@ -1,0 +1,160 @@
+---
+---
+
+<section class="about section" id="about">
+  <div class="container">
+    <h2 class="section-title">About</h2>
+
+    <div class="about-grid">
+      <div class="about-bio">
+        <p class="lead">
+          Growing up in New York City, I saw early on how environmental burdens fall unevenly across communities. That observation is what pulled me toward environmental engineering at Cornell, where I have spent the last three years studying the systems underneath those disparities. The more I learned, the more I realized that technical solutions and business and policy decisions are inseparable, which is why I decided to pursue business as well. I am passionate about work that is both challenging and makes tangible impacts.
+        </p>
+
+        <div class="about-meta">
+          <div class="meta-item">
+            <span class="meta-label">Education</span>
+            <span class="meta-value">B.S. Environmental Engineering &amp; Business Minor<br />Cornell University · Expected May 2027</span>
+          </div>
+          <div class="meta-item">
+            <span class="meta-label">Based in</span>
+            <span class="meta-value">New York, NY &amp; Ithaca, NY</span>
+          </div>
+          <div class="meta-item">
+            <span class="meta-label">Certification</span>
+            <span class="meta-value">OSHA 40-Hour HAZWOPER</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="about-sidebar">
+        <div class="sidebar-block">
+          <h3 class="sidebar-heading">Relevant Coursework</h3>
+          <ul class="sidebar-list">
+            <li>Energy Systems</li>
+            <li>Fluid Mechanics</li>
+            <li>Thermodynamics</li>
+            <li>GIS &amp; Remote Sensing</li>
+            <li>Environmental Quality Engineering</li>
+            <li>Systems Analysis</li>
+            <li>Engineering Economics</li>
+            <li>Finance &amp; Financial Accounting</li>
+            <li>Business Management</li>
+            <li>Portfolio Analysis &amp; Investment Strategy</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .about {
+    background: var(--color-bg-alt);
+    border-top: 1px solid var(--color-border);
+  }
+
+  .section-title {
+    font-family: var(--font-serif);
+    font-size: clamp(2rem, 4vw, 3.5rem);
+    font-weight: 300;
+    color: var(--color-text);
+    margin-bottom: 4rem;
+  }
+
+  .about-grid {
+    display: grid;
+    grid-template-columns: 1fr 300px;
+    gap: 5rem;
+    align-items: start;
+  }
+
+  .lead {
+    font-family: var(--font-serif);
+    font-size: 1.6rem;
+    line-height: 1.7;
+    color: var(--color-text);
+    font-weight: 300;
+    font-style: italic;
+    margin-bottom: 3rem;
+  }
+
+  .about-meta {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+    padding-top: 2.5rem;
+    border-top: 1px solid var(--color-border);
+  }
+
+  .meta-item {
+    display: grid;
+    grid-template-columns: 130px 1fr;
+    gap: 1rem;
+    align-items: start;
+  }
+
+  .meta-label {
+    font-size: 0.68rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--color-accent);
+    padding-top: 2px;
+  }
+
+  .meta-value {
+    font-size: 0.88rem;
+    color: var(--color-text);
+    line-height: 1.6;
+  }
+
+  .about-sidebar {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .sidebar-block {
+    padding: 2rem;
+    border: 1px solid var(--color-border);
+    background: var(--color-bg-deep);
+  }
+
+  .sidebar-heading {
+    font-size: 0.68rem;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--color-accent);
+    margin-bottom: 1.25rem;
+    font-family: var(--font-sans);
+    font-weight: 400;
+  }
+
+  .sidebar-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.55rem;
+  }
+
+  .sidebar-list li {
+    font-size: 0.85rem;
+    color: var(--color-text-muted);
+    padding-left: 1rem;
+    position: relative;
+  }
+
+  .sidebar-list li::before {
+    content: '—';
+    position: absolute;
+    left: 0;
+    color: var(--color-border);
+    font-size: 0.7rem;
+  }
+
+  @media (max-width: 960px) {
+    .about-grid {
+      grid-template-columns: 1fr;
+      gap: 3rem;
+    }
+  }
+</style>

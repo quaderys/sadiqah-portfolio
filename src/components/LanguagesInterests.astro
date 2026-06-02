@@ -1,0 +1,142 @@
+---
+const languages = [
+  { name: 'English', level: 'Native' },
+  { name: 'Bengali', level: 'Fluent' },
+  { name: 'Arabic', level: 'Proficient' },
+  { name: 'Chinese (Mandarin)', level: 'Proficient' },
+];
+
+const interests = [
+  'Environmental Policy',
+  'Renewable Energy',
+  'Ocean Science',
+  'Art & Architecture',
+  'Culinary Arts',
+  'Volleyball',
+  'Traveling',
+  'Painting',
+  'History',
+  'Gardening',
+  'Fashion',
+  'Music',
+];
+---
+
+<section class="lang-interests section" id="beyond">
+  <div class="container">
+    <div class="li-grid">
+      <div class="li-block">
+        <h2 class="li-title">Languages</h2>
+        <ul class="lang-list">
+          {languages.map((l) => (
+            <li class="lang-item">
+              <span class="lang-name">{l.name}</span>
+              <span class="lang-level">{l.level}</span>
+            </li>
+          ))}
+        </ul>
+      </div>
+
+      <div class="li-divider" aria-hidden="true"></div>
+
+      <div class="li-block">
+        <h2 class="li-title">Interests</h2>
+        <ul class="interests-list">
+          {interests.map((interest) => (
+            <li class="interest-item">{interest}</li>
+          ))}
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .lang-interests {
+    background: var(--color-navy);
+    color: var(--color-cream);
+    padding: 6rem 2.5rem;
+  }
+
+  .li-grid {
+    display: grid;
+    grid-template-columns: 1fr 1px 1fr;
+    gap: 5rem;
+    align-items: start;
+  }
+
+  .li-divider {
+    background: rgba(248, 244, 238, 0.12);
+    align-self: stretch;
+  }
+
+  .li-title {
+    font-family: var(--font-serif);
+    font-size: clamp(1.8rem, 3vw, 2.75rem);
+    font-weight: 300;
+    color: var(--color-cream);
+    margin-bottom: 2.5rem;
+  }
+
+  /* Languages */
+  .lang-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    border-top: 1px solid rgba(248, 244, 238, 0.15);
+  }
+
+  .lang-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 0;
+    border-bottom: 1px solid rgba(248, 244, 238, 0.15);
+  }
+
+  .lang-name {
+    font-family: var(--font-serif);
+    font-size: 1.1rem;
+    color: var(--color-cream);
+    font-weight: 300;
+  }
+
+  .lang-level {
+    font-size: 0.68rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--color-accent-light);
+  }
+
+  /* Interests */
+  .interests-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.65rem;
+  }
+
+  .interest-item {
+    font-size: 0.82rem;
+    padding: 0.45rem 1.1rem;
+    border: 1px solid rgba(248, 244, 238, 0.2);
+    color: rgba(248, 244, 238, 0.75);
+    letter-spacing: 0.04em;
+    transition: border-color 0.2s, color 0.2s;
+  }
+
+  .interest-item:hover {
+    border-color: var(--color-accent-light);
+    color: var(--color-accent-light);
+  }
+
+  @media (max-width: 768px) {
+    .li-grid {
+      grid-template-columns: 1fr;
+      gap: 3rem;
+    }
+
+    .li-divider {
+      display: none;
+    }
+  }
+</style>

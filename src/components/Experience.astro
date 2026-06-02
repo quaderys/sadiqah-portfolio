@@ -1,0 +1,227 @@
+---
+const roles = [
+  {
+    company: 'Langan Engineering and Environmental Services',
+    role: 'Environmental Engineering Intern',
+    period: 'May 2025 – Aug 2025',
+    location: 'New York, NY',
+    description: 'Embedded with a leading environmental and engineering consulting firm on active brownfield redevelopment projects across New York City.',
+    bullets: [
+      'Conducted Phase I/II Environmental Site Assessments (ESAs) ensuring NYSDEC and USEPA compliance to support property transactions and environmental insurance.',
+      'Installed monitoring wells and executed soil borings to 30+ feet; collected and classified 75+ samples for VOC, SVOC, and petroleum hydrocarbon analysis.',
+      'Performed SWPPP inspections and monitored sub-slab depressurization systems (SSDS) and soil vapor extraction systems (SVE) using pressure gauges and manometers.',
+      'Operated field equipment including CAMP devices, PID monitors, and depth-to-water meters for real-time VOC detection and groundwater mapping.',
+      'Supported asbestos abatement and lead-based paint management oversight per OSHA and NYSDEC requirements (OSHA 40-Hour HAZWOPER Certified).',
+      'Participated in client meetings with developers and financial stakeholders; analyzed NYS Brownfield Cleanup Program tax credits and affordable housing financing structures.',
+    ],
+  },
+  {
+    company: 'Engineers Without Borders — Cornell Chapter',
+    role: 'Project Team Lead',
+    period: 'Jan 2024 – Present',
+    location: 'Bolivia & Ithaca, NY',
+    description: 'Leading a multi-year international infrastructure project bringing sanitation solutions to an underserved rural community in Bolivia.',
+    bullets: [
+      'Planned and executed an international site assessment trip to Bolivia, coordinating field data collection — water quality sampling, soil borings, and elevation surveys — with local engineers and community officials.',
+      'Designed a community septic system from the ground up: hydraulic calculations for pipe slope, sizing, and flow analysis; technical models and site drawings in AutoCAD and GIS.',
+      'Built a detailed project budget grounded in local material and labor costs and coordinated on-site with contractors to validate design feasibility through active installation.',
+    ],
+  },
+  {
+    company: 'Cornell Sustainable Consulting',
+    role: 'Associate Consultant — Renewable Energy Team',
+    period: 'Jan 2025 – Present',
+    location: 'Ithaca, NY',
+    description: 'Consulting for the Tompkins Green Energy Network on Ithaca\'s Community Choice Aggregation and Distributed Energy Resources programs.',
+    bullets: [
+      'Supported outreach for Ithaca\'s CCA and DER programs in collaboration with T-GEN and Local Power LLC, informing how community energy programs are structured and communicated to residents.',
+      'Led development of five public-facing DER educational posters embedded with QR codes linking to T-GEN\'s DER program page.',
+      'Delivered final recommendations covering regulatory analysis, website improvements, and target demographic strategy for a 150-day outreach campaign ahead of the September 2026 CCA program launch.',
+      'Contributed to a DER explainer video and synthesized complex energy policy content for general community audiences.',
+    ],
+  },
+  {
+    company: 'International Socioeconomics Laboratory (ISL)',
+    role: 'President · CFO · PR & Marketing Chair',
+    period: 'Apr 2020 – Mar 2024',
+    location: 'New York, NY',
+    description: 'Rose from founding contributor to President of a student-led academic organization that grew into a nationally recognized platform with Harvard University as a partner.',
+    bullets: [
+      'Developed and pitched sponsorship packages to investors, securing partnerships with 50+ professors and Harvard University.',
+      'Raised $20,000 during COVID-19 through targeted fundraising; managed full organizational budget as CFO overseeing financial accounts, merchandise operations, and multi-cycle revenue strategy.',
+      'Planned and executed the annual ISL Symposium from concept to completion — managing vendor coordination, logistics, budgeting, and stakeholder communications.',
+      'Advanced to President, leading all organizational operations, strategic direction, and cross-departmental team management.',
+    ],
+  },
+  {
+    company: 'RISE Rockaway — Rockaway Initiative for Sustainability and Equity',
+    role: 'Research & Urban Planning Contributor',
+    period: 'Mar 2020 – Aug 2024',
+    location: 'Rockaway Peninsula, NY',
+    description: 'Contributed to long-term environmental resilience and community planning efforts along one of New York City\'s most climate-vulnerable coastlines.',
+    bullets: [
+      'Collaborated with local government representatives and community stakeholders to develop plans for public parks and recreation spaces; lobbying efforts resulted in new community green spaces along the Rockaway Peninsula.',
+      'Participated in coastal cleanups and dune reconstruction with the NYS DEC; received training from architects and engineers who contributed to Brooklyn Bridge Park and Central Park.',
+      'Co-authored 3 published research studies on coastal environmental trends in the New York metropolitan area; presented findings at the American Museum of Natural History.',
+    ],
+  },
+  {
+    company: 'United Nations Ocean Decade',
+    role: 'Team Lead & Science-Policy Lobbyist',
+    period: '2023 – 2024',
+    location: 'New York, NY / International',
+    description: 'Selected to represent youth voices in ocean science and policy at the United Nations Decade of Ocean Science for Sustainable Development (2021–2030).',
+    bullets: [
+      'Served as a team lead within the UN Ocean Decade framework, coordinating cross-disciplinary contributors toward actionable ocean sustainability goals.',
+      'Lobbied at the United Nations on behalf of ocean science priorities, engaging diplomats, scientists, and policy officials to advocate for science-informed environmental decision-making.',
+      'Contributed to multilateral discussions on coastal resilience, marine biodiversity, and the role of community-based environmental monitoring.',
+      'Synthesized scientific research into policy-facing communications and recommendations presented to UN stakeholders.',
+    ],
+  },
+  {
+    company: 'Cornell University',
+    role: 'Student Philanthropy Ambassador — Student Alumni Relations',
+    period: 'Jan 2024 – Present',
+    location: 'Ithaca, NY',
+    description: '',
+    bullets: [
+      'Conducted high-volume outbound donor outreach, personally engaging 2,000+ alumni and contributing to over $100,000 in fundraising through relationship-driven conversations.',
+      'Consistently met engagement and contribution targets representing Cornell\'s mission to a diverse donor base.',
+    ],
+  },
+];
+---
+
+<section class="experience section" id="experience">
+  <div class="container">
+    <h2 class="section-title">Experience</h2>
+
+    <div class="timeline">
+      {roles.map((role) => (
+        <article class="timeline-item">
+          <div class="timeline-meta">
+            <span class="timeline-period">{role.period}</span>
+            <span class="timeline-location">{role.location}</span>
+          </div>
+          <div class="timeline-content">
+            <h3 class="timeline-company">{role.company}</h3>
+            <p class="timeline-role">{role.role}</p>
+            {role.description && <p class="timeline-description">{role.description}</p>}
+            <ul class="timeline-bullets">
+              {role.bullets.map((b) => (
+                <li>{b}</li>
+              ))}
+            </ul>
+          </div>
+        </article>
+      ))}
+    </div>
+  </div>
+</section>
+
+<style>
+  .experience {
+    background: var(--color-bg);
+    border-top: 1px solid var(--color-border);
+  }
+
+  .section-title {
+    font-family: var(--font-serif);
+    font-size: clamp(2rem, 4vw, 3.5rem);
+    font-weight: 300;
+    color: var(--color-text);
+    margin-bottom: 4rem;
+  }
+
+  .timeline {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .timeline-item {
+    display: grid;
+    grid-template-columns: 200px 1fr;
+    gap: 3.5rem;
+    padding: 3rem 0;
+    border-bottom: 1px solid var(--color-border);
+  }
+
+  .timeline-item:first-child {
+    border-top: 1px solid var(--color-border);
+  }
+
+  .timeline-meta {
+    display: flex;
+    flex-direction: column;
+    gap: 0.35rem;
+    padding-top: 0.3rem;
+  }
+
+  .timeline-period {
+    font-size: 0.75rem;
+    color: var(--color-accent);
+    letter-spacing: 0.06em;
+  }
+
+  .timeline-location {
+    font-size: 0.72rem;
+    color: var(--color-muted);
+    letter-spacing: 0.04em;
+  }
+
+  .timeline-company {
+    font-family: var(--font-serif);
+    font-size: 1.35rem;
+    color: var(--color-text);
+    margin-bottom: 0.2rem;
+  }
+
+  .timeline-role {
+    font-size: 0.75rem;
+    color: var(--color-accent);
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    margin-bottom: 0.85rem;
+  }
+
+  .timeline-description {
+    font-size: 0.9rem;
+    color: var(--color-text-muted);
+    line-height: 1.7;
+    margin-bottom: 1.1rem;
+    font-style: italic;
+  }
+
+  .timeline-bullets {
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+  }
+
+  .timeline-bullets li {
+    font-size: 0.875rem;
+    color: var(--color-text-muted);
+    line-height: 1.75;
+    padding-left: 1.1rem;
+    position: relative;
+  }
+
+  .timeline-bullets li::before {
+    content: '–';
+    position: absolute;
+    left: 0;
+    color: var(--color-border);
+  }
+
+  @media (max-width: 768px) {
+    .timeline-item {
+      grid-template-columns: 1fr;
+      gap: 0.75rem;
+    }
+
+    .timeline-meta {
+      flex-direction: row;
+      gap: 1rem;
+    }
+  }
+</style>

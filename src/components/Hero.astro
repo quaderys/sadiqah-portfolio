@@ -1,0 +1,158 @@
+---
+const base = import.meta.env.BASE_URL;
+---
+
+<section class="hero" id="hero">
+
+  <div class="hero-left">
+    <p class="hero-eyebrow">Environmental Engineer &nbsp;·&nbsp; Consultant &nbsp;·&nbsp; Business</p>
+    <h1 class="hero-name">Sadiqah<br />Quadery</h1>
+    <p class="hero-sub">
+      B.S. Environmental Engineering &amp; Business<br />
+      Cornell University &nbsp;·&nbsp; New York, NY
+    </p>
+    <div class="hero-actions">
+      <a href="#about" class="btn-primary">My Story</a>
+      <a href="#experience" class="btn-ghost">View Work</a>
+    </div>
+  </div>
+
+  <div class="hero-right">
+    <img
+      src={`${base}headshot.jpg`}
+      alt="Sadiqah Quadery"
+      class="hero-image"
+    />
+    <div class="hero-photo-border" aria-hidden="true"></div>
+  </div>
+
+</section>
+
+<style>
+  .hero {
+    min-height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    background: var(--color-bg);
+    overflow: hidden;
+  }
+
+  .hero-left {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 120px 5rem 80px 6rem;
+  }
+
+  .hero-eyebrow {
+    font-size: 0.68rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--color-accent);
+    margin-bottom: 2rem;
+  }
+
+  .hero-name {
+    font-family: var(--font-serif);
+    font-size: clamp(4rem, 6vw, 7rem);
+    font-weight: 300;
+    line-height: 0.92;
+    letter-spacing: -0.01em;
+    color: var(--color-text);
+    margin-bottom: 2.25rem;
+  }
+
+  .hero-sub {
+    font-size: 0.88rem;
+    color: var(--color-text-muted);
+    line-height: 2;
+    margin-bottom: 3rem;
+    letter-spacing: 0.04em;
+  }
+
+  .hero-actions {
+    display: flex;
+    gap: 1.75rem;
+    align-items: center;
+  }
+
+  .btn-primary {
+    font-size: 0.72rem;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    background: var(--color-accent);
+    color: var(--color-bg);
+    padding: 0.9rem 2.25rem;
+    transition: opacity 0.2s;
+  }
+
+  .btn-primary:hover { opacity: 0.82; }
+
+  .btn-ghost {
+    font-size: 0.72rem;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--color-text-muted);
+    border-bottom: 1px solid rgba(255,255,255,0.25);
+    padding-bottom: 2px;
+    transition: color 0.2s, border-color 0.2s;
+  }
+
+  .btn-ghost:hover {
+    color: var(--color-text);
+    border-color: var(--color-text);
+  }
+
+  .hero-right {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 3rem 4rem 3rem 2rem;
+  }
+
+  .hero-image {
+    width: 100%;
+    max-width: 460px;
+    height: 580px;
+    object-fit: cover;
+    object-position: center top;
+    display: block;
+    filter: brightness(0.9) contrast(1.04);
+    border: 1.5px solid rgba(255, 255, 255, 0.35);
+    position: relative;
+    z-index: 1;
+  }
+
+  .hero-photo-border {
+    position: absolute;
+    width: calc(100% - 8rem - 18px);
+    max-width: calc(460px + 18px);
+    height: calc(580px + 18px);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    top: calc(3rem - 9px + 9px);
+    right: calc(4rem - 9px - 9px);
+    pointer-events: none;
+    z-index: 0;
+  }
+
+  @media (max-width: 900px) {
+    .hero {
+      grid-template-columns: 1fr;
+      grid-template-rows: 55vw 1fr;
+    }
+
+    .hero-right {
+      order: -1;
+    }
+
+    .hero-right::before {
+      background: linear-gradient(to bottom, transparent 60%, var(--color-bg) 100%);
+    }
+
+    .hero-left {
+      padding: 2rem 2rem 5rem;
+      justify-content: flex-start;
+    }
+  }
+</style>
